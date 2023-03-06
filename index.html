@@ -22,6 +22,13 @@
     <header class="section hdr">
       <div class="container main-nav">
         <a href="./index.html" class="logo link">Web<span>Studio</span></a>
+        <div class="burger-menu">
+          <a href="">
+            <svg class="burger" width="32px" height="22px">
+              <use href="./images/symbol-defs.svg#burger"></use>
+            </svg>
+          </a>
+        </div>
         <nav>
           <ul class="site-nav list">
             <li class="item">
@@ -111,9 +118,12 @@
                   value="accept"
                 />
 
-                <span class="accept-icon"></span> I accept the terms and
-                conditions of the
-                <a class="accept-link" href="">Privacy Policy</a>
+                <span class="accept-icon"></span>
+
+                <p>
+                  I accept the terms and conditions of the
+                  <a class="accept-link" href="">Privacy Policy</a>
+                </p>
                 <svg class="accept-checked" width="10px" height="8px">
                   <use href="./images/symbol-defs.svg#galka"></use>
                 </svg>
@@ -216,7 +226,7 @@
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="people list">
-            <li class="item">
+            <li class="item-team">
               <img
                 class="image"
                 src="./images/Mark.jpg"
@@ -258,7 +268,7 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-team">
               <img
                 class="image"
                 src="./images/Tom.jpg"
@@ -300,7 +310,7 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-team">
               <img
                 class="image"
                 src="./images/Camila.jpg"
@@ -342,7 +352,7 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-team">
               <img
                 class="image"
                 src="./images/Daniel.jpg"
@@ -488,7 +498,7 @@
           <form class="footer-form">
             <input type="email" name="mail" placeholder="E-mail" />
             <button class="footer-btn" type="submit">
-              <p class="text">Subscribe</p>
+              <span class="text">Subscribe</span>
               <svg class="footer-icon" width="24px" height="24px">
                 <use href="./images/symbol-defs.svg#send"></use>
               </svg>
