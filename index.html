@@ -22,14 +22,16 @@
     <header class="section hdr">
       <div class="container main-nav">
         <a href="./index.html" class="logo link">Web<span>Studio</span></a>
-        <div class="burger-menu">
-          <a href="">
-            <svg class="burger" width="32px" height="22px">
-              <use href="./images/symbol-defs.svg#burger"></use>
-            </svg>
-          </a>
-        </div>
-        <nav>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="burger" width="32px" height="22px">
+            <use href="./images/symbol-defs.svg#burger"></use>
+          </svg>
+        </button>
+        <nav class="nav">
           <ul class="site-nav list">
             <li class="item">
               <a class="link current" href="./index.html">Studio</a>
@@ -67,6 +69,73 @@
         </div>
       </section>
       <!-- modal -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <div class="modal-close" data-modal-close>
+            <svg class="close" width="8" height="8">
+              <use href="./images/symbol-defs.svg#close-black"></use>
+            </svg>
+          </div>
+          <p class="modal-text">
+            Leave your contacts and we will call you back
+          </p>
+          <form class="form">
+            <div class="form-fild">
+              <label class="form-label" for="name">Name</label>
+              <input type="text" class="form-input" name="name" id="name" />
+              <svg class="form-icon" width="12px" height="12px">
+                <use href="./images/symbol-defs.svg#person"></use>
+              </svg>
+            </div>
+            <div class="form-fild">
+              <label class="form-label" for="tel">Phone</label>
+              <input type="tel" class="form-input" name="tel" id="tel" />
+              <svg class="form-icon" width="13px" height="13px">
+                <use href="./images/symbol-defs.svg#phone"></use>
+              </svg>
+            </div>
+            <div class="form-fild">
+              <label class="form-label" for="mail">Email</label>
+              <input type="email" class="form-input" name="mail" id="mail" />
+              <svg class="form-icon" width="15px" height="12px">
+                <use href="./images/symbol-defs.svg#mail"></use>
+              </svg>
+            </div>
+            <div class="form-fild">
+              <label class="form-label" for="comment">Comment</label>
+              <textarea
+                class="form-textarea"
+                name="comment"
+                id="comment"
+                rows="5"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+            <div class="accept">
+              <label class="form-label-accept">
+                <input
+                  class="checkbox visually-hidden"
+                  type="checkbox"
+                  name="policy"
+                  value="accept"
+                />
+
+                <span class="accept-icon"></span>
+
+                <p>
+                  I accept the terms and conditions of the
+                  <a class="accept-link" href="">Privacy Policy</a>
+                </p>
+                <svg class="accept-checked" width="10px" height="8px">
+                  <use href="./images/symbol-defs.svg#galka"></use>
+                </svg>
+              </label>
+            </div>
+            <button class="form-btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <!-- modal-mobile -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <div class="modal-close" data-modal-close>
@@ -507,6 +576,84 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="close" width="8" height="8">
+          <use href="./images/symbol-defs.svg#close-black"></use>
+        </svg>
+      </button>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li class="item">
+            <a class="link" href="./index.html">Studio</a>
+          </li>
+          <li class="item">
+            <a class="link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="item">
+            <a class="link current" href="./contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="mobile-adr">
+        <ul class="site-addr list">
+          <li class="item">
+            <a class="link mobile-tel" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="item">
+            <a class="link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="mobile social list">
+        <li class="item">
+          <a class="link" href="">
+            <svg class="link-icon">
+              <use href="./images/symbol-defs.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a class="link" href="">
+            <svg class="link-icon">
+              <use href="./images/symbol-defs.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a class="link" href="">
+            <svg class="link-icon">
+              <use href="./images/symbol-defs.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a class="link" href="">
+            <svg class="link-icon">
+              <use href="./images/symbol-defs.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- <ul class="mobile-menu">
+        <li><a href="" class="link">Studio</a></li>
+        <li><a href="" class="link">Portfolio</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul> -->
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
