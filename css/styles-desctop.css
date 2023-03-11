@@ -24,6 +24,23 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* sections */
+.section {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1440px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 1158px;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -36,25 +53,8 @@ body {
   text-decoration: none;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 1158px;
-}
-
 .image {
   display: block;
-}
-
-/* sections */
-.section {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 1440px;
 }
 
 /* hidden headers */
